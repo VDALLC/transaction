@@ -1,0 +1,13 @@
+{
+    "name": "vda/transaction",
+    "type": "library",
+    "description": "Simple API for handling transactions",
+    "keywords": ["transaction"],
+    "require": {
+        "php": ">=5.3.23"
+    },
+    "autoload": {
+        "psr-4": { "Vda\\Transaction\\": "src/" }
+    },
+    "minimum-stability": "dev"
+}
