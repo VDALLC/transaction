@@ -25,6 +25,17 @@ interface ITransactionCapable
     public function rollback();
 
     /**
+     * Execute callback withing transaction.
+     *
+     * If callback throws an exception this method will rollback transaction and rethrow the exception.
+     * If callback successfully executes (no matter what it returns) this method will commit transaction.
+     *
+     * @param callable $callback
+     * @return mixed returns what callback returns
+     */
+    public function transaction(/*callable*/ $callback);
+
+    /**
      * Check if there are a transaction in progress
      *
      * @return boolean

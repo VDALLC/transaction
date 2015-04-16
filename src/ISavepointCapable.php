@@ -20,7 +20,7 @@ interface ISavepointCapable extends ITransactionCapable
     /**
      * Undo all changes made after the given savepoint
      *
-     * @param unknown $savepoint
+     * @param string $savepoint
      */
     public function rollbackTo($savepoint);
 }
